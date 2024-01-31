@@ -21,6 +21,7 @@ function App() {
   return (
     <div>
       <Chart options={options} type="bar" series={series} width="150%" />
+  
     </div>
   );
 }
