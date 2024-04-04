@@ -1,7 +1,8 @@
-import { useState } from "react";
+
 import Chart from "react-apexcharts";
 import Sidebar from "./components/Sidebar";
-import "./App.css";
+import { Button } from "./components/ui/button";
+
 
 function App() {
   const series = [
@@ -40,9 +41,15 @@ function App() {
         <Sidebar />
       </div>
 
-      <div>
+       <div>
+      
         <Chart options={options} type="bar" series={series} width="150%" />
       </div>
+
+      <div className="bg-red-100 ">
+      <Button>HEY</Button>
+
+      </div> 
     </div>
   );
 }

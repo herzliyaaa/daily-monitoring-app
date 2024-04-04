@@ -20,7 +20,7 @@ export default function Sidebar() {
             href="#"
             aria-label="Brand"
           >
-        sidebar.
+            sidebar.
           </a>
         </div>
 
