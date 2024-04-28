@@ -1,0 +1,9 @@
+
+Dashboard
+Finance
+ - Expenses etc. 
+Projects 
+ - Dynamic Projects 
+Notifications
+Password Manager
+Calendar

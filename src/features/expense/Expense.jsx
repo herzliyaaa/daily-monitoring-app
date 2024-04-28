@@ -1,7 +1,7 @@
 import React from "react";
 import Chart from "react-apexcharts";
 
-export default function Expense() {
+export const Expense = () => {
   const series = [
     {
       name: "Expenses",
@@ -20,7 +20,7 @@ export default function Expense() {
 
   return (
     <>
-      <Chart options={options} type='bar' series={series} width='150%' />
+      {/* <Chart options={options} type='bar' series={series} width='50%' /> */}
       <div>Expense</div>
     </>
   );

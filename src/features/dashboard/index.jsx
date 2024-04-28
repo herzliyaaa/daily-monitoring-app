@@ -38,7 +38,7 @@ export const Dashboard = () => {
   };
   return (
     <div className="container flex row h-screen w-screen ">
-      <div>
+      <div className="w-1/12">
         <Sidebar />
       </div>
 
