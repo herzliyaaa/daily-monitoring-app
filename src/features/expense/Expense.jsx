@@ -1,22 +1,4 @@
-import React from "react";
-import Chart from "react-apexcharts";
-
 export const Expense = () => {
-  const series = [
-    {
-      name: "Expenses",
-      data: [43, 53, 50, 57, 210],
-    },
-  ];
-  const options = {
-    chart: {
-      id: "simple-bar",
-    },
-
-    xaxis: {
-      categories: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    },
-  };
 
   return (
     <>

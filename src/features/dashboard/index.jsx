@@ -1,4 +1,3 @@
-import React from "react";
 import Chart from "react-apexcharts";
 import Sidebar from "@/components/Sidebar";
 
@@ -24,7 +23,7 @@ export const Dashboard = () => {
       id: "simple-bar",
     },
     colors: [
-      function ({ value, seriesIndex, w }) {
+      function ({ value }) {
         if (value < 55) {
           return "#7E30E1";
         } else {
