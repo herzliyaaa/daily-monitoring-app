@@ -1,5 +1,16 @@
-export default function Calendar(){
+import React, { useState } from "react";
+import { Calendar, momentLocalizer } from 'react-big-calendar'
+import moment from 'moment'
+
+export default function EventCalendar(){
+    const localizer = momentLocalizer(moment);
     return (
-        <div>CALENDAR</div>
+   <Calendar
+                localizer={localizer}
+             
+                startAccessor="start"
+                endAccessor="end"
+                style={{ height: 500 }}
+          />
     );
 }
