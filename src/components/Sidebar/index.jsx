@@ -1,26 +1,6 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import { Submenu } from "./Submenu";
-
-import {
-  DashboardIcon,
-  FinanceIcon,
-  ExpandIcon,
-  ProjectsIcon,
-  CalendarIcon,
-  PasswordManagerIcon,
-} from "./SidebarIcons";
-
-const SubmenuItems = [
-  { text: "Dashboard", icon: <DashboardIcon />, link: "/" },
-  { text: "Projects", icon: <ProjectsIcon />, link: "/projects" },
-  { text: "Calendar", icon: <CalendarIcon />, link: "/calendar" },
-  {
-    text: "Password",
-    icon: <PasswordManagerIcon />,
-    link: "/password-manager",
-  },
-];
+import { SubmenuItems } from "@/contants/navItems";
 
 const Sidebar = () => {
   const [isFinanceAccordionOpen, setIsFinanceAccordionOpen] = useState(false);
@@ -50,62 +30,11 @@ const Sidebar = () => {
           data-hs-accordion-always-open
         >
           <ul className="space-y-1.5">
-            <Submenu items={SubmenuItems} />
-
-            {/* Finance Accordion */}
-            <li className="hs-accordion" id="finance-accordion">
-              <button
-                type="button"
-                className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-[#1d195b] dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                onClick={toggleFinanceAccordion}
-              >
-                <FinanceIcon />
-                Finance
-                <ExpandIcon />
-              </button>
-
-              {/* Finance Accordion Content */}
-              <div
-                id="finance-accordion-child"
-                className={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300 ${
-                  isFinanceAccordionOpen ? "" : "hidden"
-                }`}
-              >
-                <ul className="pt-2 ps-2">
-                  <li>
-                    <NavLink to="/expenses">
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        href=""
-                      >
-                        Expenses{" "}
-                      </a>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/income">
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        href=""
-                      >
-                        Income
-                      </a>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/liabilities">
-                      {" "}
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        href=""
-                      >
-                        Liabilities
-                      </a>
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>
-            </li>
+            <Submenu
+              items={SubmenuItems}
+              isFinanceAccordionOpen={isFinanceAccordionOpen}
+              toggleFinanceAccordion={toggleFinanceAccordion}
+            />
           </ul>
         </nav>
       </div>
