@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Submenu } from "./Submenu";
-import { SubmenuItems } from "@/contants/navItems";
+import { SubmenuItems } from "@/constants/navItems";
 
 const Sidebar = () => {
   const [isFinanceAccordionOpen, setIsFinanceAccordionOpen] = useState(false);
