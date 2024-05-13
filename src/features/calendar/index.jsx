@@ -6,11 +6,15 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 export default function EventCalendar() {
   const localizer = momentLocalizer(moment);
   return (
-    <Calendar
-      localizer={localizer}
-      startAccessor="start"
-      endAccessor="end"
-      style={{ height: 500 }}
-    />
+    <div className="flex justify-center items-center w-full h-full">
+      <div>
+        <Calendar
+          localizer={localizer}
+          startAccessor="start"
+          endAccessor="end"
+          style={{ height: 700, width: 1000 }}
+        />
+      </div>
+    </div>
   );
 }
